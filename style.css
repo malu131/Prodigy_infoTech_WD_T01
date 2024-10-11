@@ -1,0 +1,176 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the body with a background image */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/land.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background */
+    color: white; /* Change text color for better visibility */
+    height: 100vh; /* Make body height full viewport height */
+    display: flex; /* Use flexbox for the body */
+    flex-direction: column; /* Arrange children in a column */
+}
+
+/* Style for the navigation menu */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    padding: 10px;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the menu items */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between menu items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px; /* Adjust font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* Main content styling */
+.main-content {
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: calc(100vh - 60px - 80px); /* Full height minus navbar height and footer height */
+    padding: 40px 20px; /* Padding for main content */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Add depth with shadow */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for main content */
+.main-content:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Headings */
+.main-content h1 {
+    font-size: 3em; /* Larger, bold heading */
+    margin-bottom: 20px;
+    font-weight: 700; /* Bold text */
+    letter-spacing: 2px; /* Space between letters */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow for better readability */
+}
+
+/* Paragraphs */
+.main-content p {
+    font-size: 1.2em; /* Increase font size for readability */
+    line-height: 1.6; /* Better line spacing */
+    margin-bottom: 30px; /* Space below paragraphs */
+    padding: 0 10px; /* Padding for smaller screens */
+}
+
+/* Contact form styling */
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.9); /* White background for the form */
+    color: #333; /* Dark text color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the form */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+    width: 300px; /* Set width of the form */
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Arrange items in a column */
+}
+
+/* Input fields and textarea styling */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding for input fields */
+    margin-bottom: 15px; /* Space between fields */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s; /* Smooth transition for border */
+}
+
+/* Input focus effect */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #ffcc00; /* Change border color on focus */
+}
+
+/* Submit button styling */
+.contact-form button {
+    background-color: #ffcc00; /* Button color */
+    color: #333; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+/* Button hover effect */
+.contact-form button:hover {
+    background-color: #e6b800; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Optional: Style for footer */
+footer {
+    position: fixed;
+    bottom: 0; /* Fix to bottom */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    padding: 10px; /* Padding inside the footer */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul li a {
+        font-size: 16px; /* Smaller font size for navigation on mobile */
+    }
+
+    .main-content h1 {
+        font-size: 2.5em; /* Smaller font size on mobile */
+    }
+
+    .main-content p {
+        font-size: 1em; /* Smaller paragraph font size on mobile */
+    }
+
+    .main-content {
+        padding: 30px 10px; /* Adjust padding on mobile */
+    }
+
+    .contact-form {
+        width: 100%; /* Full width on mobile */
+        padding: 15px; /* Reduce padding on mobile */
+    }
+}
